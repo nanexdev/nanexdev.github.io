@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kalkulator oszczędności — GeoEnergy</title>
+<link rel="stylesheet" href="zasoby/css/style.css">
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">GeoEnergy</div>
+<ul>
+<li><a href="index.html">Strona Główna</a></li>
+<li><a href="jak-dziala.html">Jak to działa</a></li>
+<li><a href="zalety-i-wady.html">Zalety i wady</a></li>
+<li><a href="zastosowania.html">Wykorzystanie</a></li>
+<li><a href="porownanie.html">Porównanie</a></li>
+<li><a href="kalkulator.html" class="active">Kalkulator</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section class="hero">
+<h1>Kalkulator oszczędności dla pompy ciepła</h1>
+<p>Prosty przelicznik rocznych kosztów ogrzewania i okresu zwrotu inwestycji</p>
+</section>
+
+<section class="content">
+<div class="calc-box">
+<h2>Wprowadź dane</h2>
+
+<div class="calc-row">
+<div class="full">
+<label for="Q">Roczne zapotrzebowanie na ciepło Q [kWh]</label>
+<input type="number" id="Q" value="15000" min="0" step="1">
+</div>
+
+<div>
+<label for="p_el">Cena 1 kWh energii elektrycznej [PLN]</label>
+<input type="number" id="p_el" value="0.8" min="0" step="0.01">
+</div>
+
+<div>
+<label for="COP">Oczekiwany COP pompy ciepła</label>
+<input type="number" id="COP" value="3" min="1" step="0.1">
+</div>
+
+<div class="full">
+<label for="cost_pompa">Koszt instalacji pompy ciepła [PLN] (opcjonalnie)</label>
+<input type="number" id="cost_pompa" value="40000" min="0" step="100">
+</div>
+
+<div class="full">
+<label for="lifetime">Okres życia instalacji [lata] (opcjonalnie)</label>
+<input type="number" id="lifetime" value="20" min="1" step="1">
+</div>
+</div>
+
+<button id="calcBtn">Oblicz</button>
+
+<div id="result" class="result" style="display:none;">
+<h3>Wyniki</h3>
+<p><strong>Koszt ogrzewania elektrycznego:</strong> <span id="costEl"></span> PLN/rok</p>
+<p><strong>Koszt ogrzewania pompą ciepła:</strong> <span id="costPompa"></span> PLN/rok</p>
+<p><strong>Oszczędność roczna:</strong> <span id="savings"></span> PLN/rok</p>
+<p><strong>Prosty okres zwrotu inwestycji:</strong> <span id="payback"></span> lat</p>
+<p><strong>Szacowany koszt energii dostarczonej przez pompę (bez amortyzacji):</strong> <span id="costPerKWh"></span> PLN/kWh</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footer-content">
+<div class="footer-section">
+<h4>Szybkie linki</h4>
+<ul>
+<li><a href="index.html">Strona główna</a></li>
+<li><a href="jak-dziala.html">Jak to działa</a></li>
+<li><a href="zalety-i-wady.html">Zalety i wady</a></li>
+<li><a href="zastosowania.html">Wykorzystanie</a></li>
+<li><a href="porownanie.html">Porównanie</a></li>
+<li><a href="kalkulator.html">Kalkulator</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>O nas</h4>
+<p>Promujemy zrównoważone rozwiązania oparte na energii geotermalnej.</p>
+</div>
+<div class="footer-section">
+<h4>Kontakt</h4>
+<p>Email: nanex@nanex.dev</p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 GeoEnergy. Wszelkie prawa zastrzeżone.</p>
+</div>
+</footer>
+
+<script src="zasoby/js/script.js"></script>
+</body>
+</html>
